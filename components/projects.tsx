@@ -96,7 +96,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-muted/30">
+    <section id="projects" className="">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
