@@ -17,6 +17,25 @@ type Project = {
   githubUrl: string;
 };
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
+
 const projects: Project[] = [
   {
     title: "MarketSquare E-Commerce",
@@ -119,41 +138,24 @@ export default function Projects() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
-
   return (
     <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
           ref={ref}
+          variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          variants={containerVariants}
           className="max-w-6xl mx-auto"
         >
           <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="text-primary">&lt;</span> My Projects{" "}
               <span className="text-primary">/&gt;</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              A collection of my recent projects showcasing full-stack
-              expertise, backend engineering, and UI/UX polish.
+              A collection of my recent projects showcasing my expertise in
+              full-stack development, problem-solving, and UI/UX design.
             </p>
           </motion.div>
 
@@ -162,22 +164,22 @@ export default function Projects() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="group bg-card rounded-lg border border-border hover:border-primary/50 transition-all flex flex-col overflow-hidden h-full"
+                className="group bg-card rounded-lg overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 flex flex-col h-full"
               >
-                <div className="relative h-52">
+                <div className="relative h-52 overflow-hidden">
                   <Image
                     src={project.image || "/placeholder.svg"}
-                    alt={project.title || "Project image"}
+                    alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                     {project.demoUrl && project.demoUrl !== "#" && (
                       <Link
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-primary text-primary-foreground p-2 rounded-full hover:bg-primary/80"
+                        className="bg-primary text-primary-foreground p-2 rounded-full hover:bg-primary/80 transition-colors"
                         aria-label="View demo"
                       >
                         <ExternalLink size={20} />
@@ -188,8 +190,8 @@ export default function Projects() {
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-card text-foreground p-2 rounded-full hover:bg-muted"
-                        aria-label="View code"
+                        className="bg-card text-foreground p-2 rounded-full hover:bg-muted transition-colors"
+                        aria-label="View code on GitHub"
                       >
                         <Github size={20} />
                       </Link>
@@ -197,9 +199,9 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-6 flex-1 flex flex-col">
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold">{project.title}</h3>
+                    <h3 className="text-xl font-bold mb-1">{project.title}</h3>
                     <p className="text-sm text-primary font-medium">
                       {project.role}
                     </p>
