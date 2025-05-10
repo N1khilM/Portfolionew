@@ -7,10 +7,12 @@ import {
   MapPin,
   Github,
   Linkedin,
+  FileText,
   Instagram,
   Facebook,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export default function Contact() {
   return (
@@ -24,11 +26,11 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4 tracking-tight">
-            Get In Touch
+            Let's Connect
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-            I'm always open to opportunities and collaborations. Let's build
-            something amazing together!
+            I'm currently open to freelance and full-time opportunities. Got an
+            idea or a role I'd be perfect for? Let's talk.
           </p>
         </motion.div>
 
@@ -56,22 +58,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Phone */}
-              <div className="flex items-start">
-                <div className="p-3 bg-primary/10 rounded-full mr-4">
-                  <Phone className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-lg">Phone</h4>
-                  <a
-                    href="tel:+919113279296"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    +91 91132 79296
-                  </a>
-                </div>
-              </div>
-
               {/* Location */}
               <div className="flex items-start">
                 <div className="p-3 bg-primary/10 rounded-full mr-4">
@@ -84,46 +70,41 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Social Icons */}
-            <div className="pt-8 border-t flex justify-center space-x-6">
-              <motion.a
-                href="https://github.com/N1khilM"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="text-primary hover:text-foreground transition-colors"
-              >
-                <Github className="h-6 w-6" />
-              </motion.a>
+            {/* Social Links */}
+            <div className="pt-8 border-t space-y-4">
+              <div className="flex justify-center space-x-4">
+                <motion.a
+                  href="https://github.com/N1khilM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 bg-card hover:bg-muted px-4 py-2 rounded-md transition-colors"
+                >
+                  <Github className="h-5 w-5" />
+                  <span>GitHub</span>
+                </motion.a>
 
-              <motion.a
-                href="https://linkedin.com/in/nikhilmugali"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="text-primary hover:text-foreground transition-colors"
-              >
-                <Linkedin className="h-6 w-6" />
-              </motion.a>
+                <motion.a
+                  href="https://linkedin.com/in/nikhilmugali"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 bg-card hover:bg-muted px-4 py-2 rounded-md transition-colors"
+                >
+                  <Linkedin className="h-5 w-5" />
+                  <span>LinkedIn</span>
+                </motion.a>
+              </div>
 
-              <motion.a
-                href="https://www.facebook.com/nikhil.kingh.3"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="text-primary hover:text-foreground transition-colors"
+              {/* <motion.a
+                href="/resume.pdf"
+                download
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-md transition-colors w-full md:w-auto mx-auto"
               >
-                <Facebook className="h-6 w-6" />
-              </motion.a>
-              <motion.a
-                href="https://www.instagram.com/realnikhill/"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="text-primary hover:text-foreground transition-colors"
-              >
-                <Instagram className="h-6 w-6" />
-              </motion.a>
+                <FileText className="h-5 w-5" />
+                <span>Download Resume</span>
+              </motion.a> */}
             </div>
           </Card>
         </motion.div>

@@ -40,6 +40,27 @@ export default function About() {
     { name: "Web Performance Optimization", level: 75 },
   ];
 
+  const strengths = [
+    {
+      icon: Code,
+      title: "Clean Code",
+      description:
+        "Writing clean, maintainable code that follows best practices and industry standards.",
+    },
+    {
+      icon: Palette,
+      title: "User-Friendly Interfaces",
+      description:
+        "Designing intuitive and efficient user interfaces that enhance the user experience.",
+    },
+    {
+      icon: Lightbulb,
+      title: "Problem Solving",
+      description:
+        "Solving complex problems with simple, elegant solutions that scale.",
+    },
+  ];
+
   return (
     <section id="about" className="py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -56,13 +77,10 @@ export default function About() {
               <span className="text-primary">/&gt;</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              I’m <span className="font-bold">Nikhil Mugali</span>, a passionate{" "}
-              <span className="font-bold">Full-Stack Developer</span> with
-              expertise in <span className="font-bold">ReactJS</span>,{" "}
-              <span className="font-bold">Node.js</span>, and{" "}
-              <span className="font-bold">Django</span>. I thrive on building
-              scalable, performant web applications with a focus on clean design
-              and seamless user experiences.
+              I'm a full-stack developer with a passion for building web apps
+              that are not just functional, but intuitive and efficient. I focus
+              on JavaScript ecosystems (React, Node, Next.js) and Python
+              frameworks like Django to deliver reliable solutions.
             </p>
           </motion.div>
 
@@ -70,24 +88,15 @@ export default function About() {
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-bold mb-4">My Journey</h3>
               <p className="text-muted-foreground mb-4">
-                I began my coding journey during my{" "}
-                <span className="font-bold">BCA</span> at BMHECs CSI College of
-                Commerce, Dharwad, where I developed a strong foundation in
-                programming. Further honing my skills during my
-                <span className="font-bold"> MCA</span> at{" "}
-                <span className="font-bold">Karnatak University</span>, I
-                explored various technologies, from frontend frameworks to
-                backend architectures.
+                With extensive experience in both frontend and backend
+                development, I specialize in creating scalable web applications
+                that deliver exceptional user experiences. My approach combines
+                technical expertise with a keen eye for design and usability.
               </p>
               <p className="text-muted-foreground">
-                Through hands-on projects like{" "}
-                <span className="font-bold">MarketSquare</span>,{" "}
-                <span className="font-bold">Expense Tracker Pro</span>, and my
-                personal <span className="font-bold">Portfolio</span>, I&apos;ve
-                built a deep understanding of building{" "}
-                <span className="font-bold">responsive</span>,{" "}
-                <span className="font-bold">secure</span>, and
-                <span className="font-bold">scalable</span> applications.
+                Currently open to freelance, contract, and full-time roles, I'm
+                always excited to take on new challenges and contribute to
+                innovative projects.
               </p>
             </motion.div>
 
@@ -115,43 +124,22 @@ export default function About() {
           </div>
 
           <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-bold mb-8 text-center">What I Do</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center">
+              Core Strengths
+            </h3>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-card p-6 rounded-lg border border-border">
-                <Code className="text-primary mb-4 h-10 w-10" />
-                <h4 className="text-xl font-bold mb-2">
-                  Full-Stack Development
-                </h4>
-                <p className="text-muted-foreground">
-                  Building end-to-end web applications using{" "}
-                  <span className="font-bold">ReactJS</span>,
-                  <span className="font-bold">Node.js</span>, and{" "}
-                  <span className="font-bold">Django</span>, ensuring
-                  scalability and performance.
-                </p>
-              </div>
-
-              <div className="bg-card p-6 rounded-lg border border-border">
-                <Palette className="text-primary mb-4 h-10 w-10" />
-                <h4 className="text-xl font-bold mb-2">UI/UX Design</h4>
-                <p className="text-muted-foreground">
-                  Crafting clean, user-friendly interfaces with a focus on
-                  <span className="font-bold">responsive design</span> and{" "}
-                  <span className="font-bold">
-                    web performance optimization
-                  </span>
-                  .
-                </p>
-              </div>
-
-              <div className="bg-card p-6 rounded-lg border border-border">
-                <Lightbulb className="text-primary mb-4 h-10 w-10" />
-                <h4 className="text-xl font-bold mb-2">Problem Solving</h4>
-                <p className="text-muted-foreground">
-                  Tackling complex coding challenges with innovative solutions,
-                  ensuring efficient and maintainable codebases.
-                </p>
-              </div>
+              {strengths.map((strength, index) => (
+                <div
+                  key={index}
+                  className="bg-card p-6 rounded-lg border border-border"
+                >
+                  <strength.icon className="text-primary mb-4 h-10 w-10" />
+                  <h4 className="text-xl font-bold mb-2">{strength.title}</h4>
+                  <p className="text-muted-foreground">
+                    {strength.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </motion.div>

@@ -10,6 +10,8 @@ import ScrollIndicator from "@/components/scroll-indicator";
 import BackgroundEffect from "@/components/background-effect";
 import VenomStarParticle from "@/components/tsparticles";
 import { ShootingStars } from "@/components/tsparticlesShootingstars";
+import Head from "next/head";
+import Skills from "@/components/skills";
 
 export const metadata: Metadata = {
   title: "Nikhil Portfolio",
@@ -32,6 +34,18 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-background text-foreground overflow-hidden">
+      <Head>
+        <title>Nikhil Mugali | Full-Stack Developer</title>{" "}
+        <meta
+          name="description"
+          content="Nikhil Mugali, a full-stack developer specializing in React, Next.js, Node.js, and Django."
+        />{" "}
+        <meta
+          name="keywords"
+          content="full-stack developer, React, Next.js, Node.js, Django, MongoDB, web development, India"
+        />
+        <meta name="author" content="Nikhil Mugali" />{" "}
+      </Head>
       <BackgroundEffect />
       <Navbar />
       <VenomStarParticle />
@@ -42,6 +56,7 @@ export default function Home() {
         <About />
         <Projects />
         <Experience />
+        <Skills />
         <Contact />
       </main>
       <Footer />

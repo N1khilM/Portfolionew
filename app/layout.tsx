@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Head from "next/head";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "NikhilPortfolio",
