@@ -83,7 +83,7 @@ export default function Projects() {
         "Reduced loading time by 25% through API response optimization",
       ],
       image: "/WeatherMe.png",
-      demoUrl: "https://github.com/N1khilM/weather-app",
+      demoUrl: "",
       githubUrl: "https://github.com/N1khilM/weather-app",
     },
     {
@@ -115,8 +115,8 @@ export default function Projects() {
         "Built analytics dashboard for productivity insights",
       ],
       image: "/taskmanager.png",
-      demoUrl: "https://nikhilmugali-portfolio.vercel.app/",
-      githubUrl: "#",
+      demoUrl: "#",
+      githubUrl: "https://github.com/N1khilM/TaskManager",
     },
     {
       title: "Currency Converter",
@@ -131,8 +131,8 @@ export default function Projects() {
         "Created custom converter for 170+ currencies with favorite selections",
       ],
       image: "/currencyconverter.png",
-      demoUrl: "https://nikhilmugali-portfolio.vercel.app/",
-      githubUrl: "#",
+      demoUrl: "#",
+      githubUrl: "https://github.com/N1khilM/CurrencyConverter",
     },
   ];
 
