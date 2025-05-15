@@ -2,11 +2,6 @@
 
 import dynamic from "next/dynamic";
 
-const About = dynamic(() => import("./about"), { ssr: false });
-const Projects = dynamic(() => import("./projects"), { ssr: false });
-const Experience = dynamic(() => import("./experience"), { ssr: false });
-const Skills = dynamic(() => import("./skills"), { ssr: false });
-const Contact = dynamic(() => import("./contact"), { ssr: false });
 const BackgroundEffect = dynamic(() => import("./background-effect"), {
   ssr: false,
 });
@@ -27,11 +22,6 @@ export default function LazySections() {
       <VenomStarParticle />
       <ShootingStars />
       <ScrollIndicator />
-      <About />
-      <Projects />
-      <Experience />
-      <Skills />
-      <Contact />
     </>
   );
 }

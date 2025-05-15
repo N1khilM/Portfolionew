@@ -15,7 +15,7 @@ export default function Hero() {
         id="home"
         className="relative pt-24 md:pt-32 pb-16 md:pb-24 min-h-[90vh] flex items-center overflow-hidden"
       >
-        <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-br from-background via-primary/15 to-secondary/10 dark:from-background dark:via-primary/15 dark:to-secondary/10" />
+        <div className="absolute  -z-10 h-full w-full bg-gradient-to-br from-background via-primary/15 to-secondary/10 dark:from-background dark:via-primary/15 dark:to-secondary/10" />
 
         <div className="container px-4 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 place-items-center">

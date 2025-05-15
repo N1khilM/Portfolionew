@@ -3,6 +3,11 @@ import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import LazySections from "@/components/lazysections";
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Experience from "@/components/experience";
+import Skills from "@/components/skills";
+import Contact from "@/components/contact";
 
 export const metadata: Metadata = {
   title: "Nikhil Portfolio",
@@ -20,8 +25,13 @@ export default function Home() {
     <div className="relative min-h-screen bg-background text-foreground overflow-hidden">
       <Navbar />
       <main>
-        <Hero />
         <LazySections />
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Skills />
+        <Contact />
       </main>
       <Footer />
     </div>
