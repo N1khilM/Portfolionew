@@ -40,6 +40,32 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
+      title: "PizzaNee – Full-Stack Pizza Ordering",
+      role: "Full-Stack Developer",
+      stack: [
+        "React",
+        "Redux Toolkit",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "Stripe",
+      ],
+      description:
+        "A full-stack pizza ordering application featuring dynamic menus, custom pizza creation, cart management, and Stripe Checkout integration with server-side payment verification.",
+      keyHighlights: [
+        "Built a custom pizza builder with ingredient selection and backend price validation",
+        "Implemented cart management with quantity updates and item removal",
+        "Integrated Stripe Checkout with webhook-based payment verification",
+        "Designed REST APIs and MongoDB models for pizzas and orders",
+        "Implemented order creation and payment status tracking",
+      ],
+      image: "/pizza-nee.png",
+      demoUrl: "https://pizza-nee.vercel.app/",
+      githubUrl: "https://github.com/N1khilM/PizzaNee",
+    },
+
+    {
       title: "MarketSquare E-Commerce",
       role: "Full-Stack Developer",
       stack: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
