@@ -40,6 +40,31 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
+      title: "Sweety – Blood Glucose Tracker",
+      role: "Full-Stack Developer",
+      stack: [
+        "React",
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "JWT",
+        "bcrypt",
+        "REST API",
+      ],
+      description:
+        "A full-stack blood glucose tracking application that lets users securely manage daily readings and review daily, month-to-date, and monthly reports.",
+      keyHighlights: [
+        "Implemented JWT authentication with bcrypt password hashing",
+        "Built reading CRUD with validation for four daily time slots",
+        "Enforced glucose value limits, duplicate prevention, and user-specific data access",
+        "Developed daily and monthly reports with highest, lowest, average, and reading counts",
+        "Added 14 API integration tests covering authentication, validation, and data isolation",
+      ],
+      image: "/sweety-glucose.png",
+      demoUrl: "https://sweety-glucose.vercel.app/",
+      githubUrl: "https://github.com/N1khilM/sweety",
+    },
+    {
       title: "PizzaNee – Full-Stack Pizza Ordering",
       role: "Full-Stack Developer",
       stack: [
